@@ -30,7 +30,7 @@ build/vad.o: vad.cc
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 test/apply-vad: test/apply-vad.cc lib/vad.a
-	$(CXX) $(CXXFLAGS) $^ -o $@
+	$(CXX) $(CXXFLAGS) $^ -lpthread -o $@
 
 -include build/*.d
 -include build/*/*/*/*.d
